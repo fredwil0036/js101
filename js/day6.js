@@ -5,6 +5,7 @@
 function findLargest(nbr){
 
     let highestNumber = nbr[0];
+    
     for(let i = 1 ; i  < nbr.length ; i++){
         if (nbr[i] > highestNumber) {
                 highestNumber = numbers[i];
