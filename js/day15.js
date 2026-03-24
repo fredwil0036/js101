@@ -1,16 +1,19 @@
-
 // Day 15 – Count Word Frequency
 // Count how many times each word appears in a sentence.
 
-const word = "one two one every have a lowj"
+const word = "one two one every have a low one";
 
-// convert into array the word
 const aWord = word.split(' ');
+const frequency = {};
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < aWord.length; i++) {
+    const currentWord = aWord[i];
 
-    for (let j = i + 1; j <= 3; j++) {
-        console.log(i, j)
+    if (frequency[currentWord]) {
+        frequency[currentWord]++;
+    } else {
+        frequency[currentWord] = 1;
     }
-
 }
+
+console.log(frequency);
