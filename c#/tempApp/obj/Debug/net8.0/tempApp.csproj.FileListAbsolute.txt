@@ -1,0 +1,15 @@
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\bin\Debug\net8.0\tempApp.exe
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\bin\Debug\net8.0\tempApp.deps.json
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\bin\Debug\net8.0\tempApp.runtimeconfig.json
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\bin\Debug\net8.0\tempApp.dll
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\bin\Debug\net8.0\tempApp.pdb
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\tempApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\tempApp.AssemblyInfoInputs.cache
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\tempApp.AssemblyInfo.cs
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\tempApp.csproj.CoreCompileInputs.cache
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\tempApp.sourcelink.json
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\tempApp.dll
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\refint\tempApp.dll
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\tempApp.pdb
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\tempApp.genruntimeconfig.cache
+C:\Users\Fredwil Membrere\OneDrive\Desktop\Github Project\js101\c#\tempApp\obj\Debug\net8.0\ref\tempApp.dll
