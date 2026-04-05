@@ -1,33 +1,45 @@
+using MySql.Data.MySqlClient;
+
 class Crud
 {
+
+    
   public static void AddWire(ref int nextID, List<Wire> inventory)
     {
-        Wire wire = new Wire();
 
-        wire.Name = ValidationService.GetValidName();
-        wire.Length = ValidationService.GetValidDouble("Enter length (meters): ");
-        wire.Quantity = ValidationService.GetValidInt("Enter quantity: ");
+        var Name = ValidationService.GetValidName();
+        double Length = ValidationService.GetValidDouble("Enter length (meters): ");
+        int Quantity = ValidationService.GetValidInt("Enter quantity: ");
 
-        wire.Id = nextID++;
+        using(var conn = ConnectionDB.GetConnection())
+        {
+            conn.Open();
+                        string query = "INSERT INTO wires (wire_name, length, quantity) VALUES (@wire_name, @length, @quantity)";
+            var cmd = new MySqlCommand(query,conn);
+            cmd.Parameters.AddWithValue("@wire_name",Name);
+            cmd.Parameters.AddWithValue("@length",Length);
+            cmd.Parameters.AddWithValue("@quantity",Quantity);
+            cmd.ExecuteNonQuery();
 
-        inventory.Add(wire);
+        }        
 
         Console.WriteLine("Wire added successfully!");
     }
 
     public static void ViewWire(ref List<Wire> inventory)
     {
-        Console.WriteLine("\n--- Wire List ---");
-        
-        if (inventory.Count == 0)
+        using(var conn = ConnectionDB.GetConnection())
         {
-            Console.WriteLine("No wires available.");
-            return;
-        }
+            conn.Open();
+            string query = "SELECT * FROM wires";
+            var cmd = new MySqlCommand(query,conn);
+            var reader = cmd.ExecuteReader();
 
-        foreach (var wire in inventory)
-        {
-            wire.Display();
+            Console.WriteLine("\n--- Wire List ---");
+            while (reader.Read())
+            {
+                Console.WriteLine($"ID: {reader["id"]} | Name: {reader["wire_name"]} | Length: {reader["length"]}m | Qty: {reader["quantity"]}");
+            }
         }
     }
 
