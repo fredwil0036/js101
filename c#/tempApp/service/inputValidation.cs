@@ -6,7 +6,7 @@ class ValidationService
         do
         {
             Console.Write("Enter wire name: ");
-            input = Console.ReadLine();
+            input = Console.ReadLine()!;
 
               if (string.IsNullOrWhiteSpace(input))
                 {

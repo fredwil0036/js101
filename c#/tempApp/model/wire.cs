@@ -12,4 +12,5 @@ class Wire
     {
         Console.WriteLine($"ID: {Id} | Wire: {Name}, Length: {Length}m, Stock: {Quantity}");
     }
+    
 }
