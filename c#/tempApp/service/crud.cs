@@ -20,8 +20,6 @@ class Crud
     }
 }
 
-
-    
     public static void AddWire()
     {
 
@@ -64,7 +62,6 @@ class Crud
             }
         }
     }
-
 
    public static void UpdateWire()
 {
@@ -154,4 +151,11 @@ class Crud
         }
     }
 
+    public static void SearchWire()
+    {
+        using (var conn = ConnectionDB.GetConnection())
+        {
+            conn.Open();
+        }
+    }
 }
