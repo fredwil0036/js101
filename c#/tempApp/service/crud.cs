@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Cms;
 using ZstdSharp.Unsafe;
 
 class Crud
@@ -22,21 +23,17 @@ class Crud
 
     public static void AddWire()
     {
-
+        string query = "INSERT INTO wires (wire_name, length, quantity) VALUES (@wire_name, @length, @quantity)";
         var Name = ValidationService.GetValidName();
         double Length = ValidationService.GetValidDouble("Enter length (meters): ");
         int Quantity = ValidationService.GetValidInt("Enter quantity: ");
+       ExecuteCmd.ExecuteForNonQuery(query,cmd =>
+       {
+           cmd.Parameters.AddWithValue("@wire_name", Name);
+           cmd.Parameters.AddWithValue("@length", Name);
+           cmd.Parameters.AddWithValue("@quantity", Name);
 
-        using(var conn = ConnectionDB.GetConnection())
-        {
-            conn.Open();
-            string query = "INSERT INTO wires (wire_name, length, quantity) VALUES (@wire_name, @length, @quantity)";
-            var cmd = new MySqlCommand(query,conn);
-            cmd.Parameters.AddWithValue("@wire_name",Name);
-            cmd.Parameters.AddWithValue("@length",Length);
-            cmd.Parameters.AddWithValue("@quantity",Quantity);
-            cmd.ExecuteNonQuery();
-        }        
+       });    
 
         Console.WriteLine("Wire added successfully!");
     }
@@ -158,4 +155,7 @@ class Crud
             conn.Open();
         }
     }
+
+
+
 }
